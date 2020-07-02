@@ -27,6 +27,7 @@ class CurrencyDropdown extends Component {
         const { currency } = this.props;
         return (
             <div className="ps-dropdown">
+                
                 {currency ? (
                     <a href="/" onClick={e => e.preventDefault()}>
                         {currency.text}

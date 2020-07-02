@@ -45,9 +45,24 @@ class NavigationDefault extends Component {
                             className="menu"
                         />
                         <ul className="navigation__extra">
+                        <li>
+                                <Link href="/shop/shop-sidebar-without-banner">
+                                    <a>Hot Deals</a>
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/">
+                                    <a>Customer Support</a>
+                                </Link>
+                            </li>
                             <li>
                                 <Link href="/vendor/become-a-vendor">
-                                    <a>Sell on Martfury</a>
+                                    <a>Sell</a>
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/">
+                                    <a>Return</a>
                                 </Link>
                             </li>
                             <li>
@@ -55,12 +70,12 @@ class NavigationDefault extends Component {
                                     <a>Tract your order</a>
                                 </Link>
                             </li>
-                            <li>
+                            {/* <li>
                                 <CurrencyDropdown />
                             </li>
                             <li>
                                 <LanguageSwicher />
-                            </li>
+                            </li> */}
                         </ul>
                     </div>
                 </div>
