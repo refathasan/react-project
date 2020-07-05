@@ -42,12 +42,12 @@ class HeaderMarketPlace4 extends Component {
                                         <a>Track Your Order</a>
                                     </Link>
                                 </li>
-                                <li>
+                                {/* <li>
                                     <CurrencyDropdown />
                                 </li>
                                 <li>
                                     <LanguageSwicher />
-                                </li>
+                                </li> */}
                             </ul>
                         </div>
                     </div>

@@ -12,7 +12,7 @@ import { getCollections } from '../../store/collection/action';
 import ShopSidebarBestSeller from '../../components/partials/shop/modules/ShopSidebarBestSeller';
 import ShopSidebarBanner from '../../components/partials/shop/ShopSidebarBanner';
 import ShopWidget from '../../components/partials/shop/modules/ShopWidget';
-
+import MartketPlace4Dealhot from '../../components/partials/homepage/marketplace4/MartketPlace4Dealhot';
 class ShopSidebarPage extends React.Component {
     constructor(props) {
         super(props);

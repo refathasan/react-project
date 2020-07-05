@@ -49,19 +49,19 @@ class HomeMarketPlace4Page extends Component {
         const { subscribe } = this.state;
         return (
             <div className="site-content">
-                <HeaderMarketPlace4 />
+                {/* <HeaderMarketPlace4 />
                 <HeaderMobile />
                 <NavigationList />
-                <SubscribePopup active={subscribe} />
+                <SubscribePopup active={subscribe} /> */}
                 <main id="homepage-6">
-                    <MartketPlace4Banner />
+                    {/* <MartketPlace4Banner />
                     <MartketPlace4SiteFeatures />
-                    <MartketPlace4Promotions />
+                    <MartketPlace4Promotions /> */}
                     <MartketPlace4Dealhot collectionSlug="deal_of_the_day" />
-                    <MartketPlace4TopCategories />
-                    <MartketPlace4CategoriesBox />
+                    {/* <MartketPlace4TopCategories />
+                    <MartketPlace4CategoriesBox /> */}
                 </main>
-                <FooterMarketPlace2 />
+                {/* <FooterMarketPlace2 /> */}
             </div>
         );
     }

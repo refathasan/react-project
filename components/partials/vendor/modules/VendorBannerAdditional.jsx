@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-const VendorBanner = () => (
+const VendorBannerAdditional = () => (
     <div
         className="ps-vendor-banner bg--cover"
         style={{ backgroundImage: "url('/static/img/bg/vendor.jpg')" }}
@@ -11,10 +11,9 @@ const VendorBanner = () => (
                     Millions Of Shoppers Can’t Wait To See What You Have In
                     Store
                 </h2>
-                {/* <Link href="/vendor/store-list"> */}
-                <Link href="/vendor/become-a-vendor">
+                <Link href="/vendor/store-list">
                     <a className="ps-btn ps-btn--lg" href="#">
-                        Become a vendor
+                        Start Selling
                     </a>
                 </Link>
             </div>
@@ -22,4 +21,4 @@ const VendorBanner = () => (
     </div>
 );
 
-export default VendorBanner;
+export default VendorBannerAdditional;
