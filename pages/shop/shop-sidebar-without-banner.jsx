@@ -76,6 +76,7 @@ class ShopSidebarWithoutBannerPage extends Component {
                 <HeaderMobile />
                 <NavigationList />
                 <BreadCrumb breacrumb={breadCrumb} />
+                <HomeMarketPlace4Page/>
                 <div className="ps-page--shop" id="shop-sidebar">
                     <div className="container">
                         <div className="ps-layout--shop">
@@ -85,7 +86,7 @@ class ShopSidebarWithoutBannerPage extends Component {
                             </div>
                            
                         </div>
-                        <HomeMarketPlace4Page/>
+                        
                     </div>
                     
                 </div>

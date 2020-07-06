@@ -4,18 +4,15 @@
         margin-bottom: 5px;
         font-size: 24px;
     }
-
     p {
         margin-bottom: 0;
     }
-
     .form-group--nest {
         button {
             padding-left: 45px;
             padding-right: 45px;
         }
     }
-
     @include media('<lg') {
         p {
             margin-bottom: 10px;
@@ -27,7 +24,6 @@
     display: flex;
     flex-flow: row nowrap;
     position: relative;
-
     .ps-form__categories {
         position: relative;
         background-color: #fff;
@@ -47,7 +43,6 @@
             @include appearance(none);
         }
     }
-
     .ant-select {
         .ant-select-selection {
             height: 42px;
@@ -60,7 +55,6 @@
             }
         }
     }
-
     .form-control {
         background-color: #fff;
         color: $color-heading;
@@ -68,16 +62,13 @@
         border: none;
         border-radius: 0;
     }
-
     .form-group--icon {
         background-color: #ffffff;
         border-radius: 4px 0 0 4px;
-
         i {
             z-index: 1;
         }
     }
-
     select.form-control {
         border-right: 1px solid #ccc;
         border-radius: 4px 0 0 4px;
@@ -90,7 +81,6 @@
             color: rgba(102, 102, 102, 1);
         }
     }
-
     button {
         background-color: $color-heading;
         color: #ffffff;
@@ -99,7 +89,6 @@
         padding: 0 24px;
         border-radius: 0 4px 4px 0;
     }
-
     .ps-panel--search-result {
         position: absolute;
         top: 100%;
@@ -122,7 +111,6 @@
             opacity: 1;
             visibility: visible;
         }
-
         .ps-product {
             border-bottom: 1px solid #eaeaea;
             padding-bottom: 10px;
@@ -133,13 +121,11 @@
 .ps-form--widget-search {
     position: relative;
     margin-bottom: 20px;
-
     input {
         height: 34px;
         background-color: #ffffff;
         border-radius: 0;
     }
-
     button {
         border: none;
         background-color: transparent;
@@ -157,29 +143,24 @@
         line-height: 1.2em;
         text-transform: uppercase;
     }
-
     p {
         sup {
             margin-left: 5px;
             color: $color-danger;
         }
     }
-
     .form-group__rating {
         display: flex;
         align-items: center;
-
         label {
             margin-bottom: 0;
             line-height: 20px;
             margin-right: 15px;
         }
     }
-
     .form-control {
         border-radius: 0;
     }
-
     button {
         border-radius: 0;
         font-weight: 600;
@@ -193,10 +174,8 @@
         font-size: 24px;
         color: $color-heading;
     }
-
     .submit {
         text-align: center;
-
         .ps-btn {
             padding: 0 30px;
             height: 50px;
@@ -208,10 +187,8 @@
     .form-control {
         background-color: #ffffff;
     }
-
     .submit {
         text-align: center;
-
         button {
             height: 50px;
             padding: 0 30px;
@@ -224,21 +201,17 @@
     margin: 0 auto !important;
     padding-top: 130px;
     @extend %list-reset;
-
     .ps-tab-list {
-        text-align: center;
-        margin-bottom: 30px;
-
+        text-align: left;
+        margin-bottom: 10px;
         li {
             display: inline-block;
             padding: 0 15px;
-
             a {
                 font-size: 30px;
                 color: $color-text;
                 font-weight: 600;
             }
-
             &.active {
                 a {
                     color: $color-heading;
@@ -246,86 +219,69 @@
             }
         }
     }
-
     .form-forgot {
         position: relative;
-
         input {
             padding-right: 100px;
         }
-
-        > a {
+        >a {
             @include vertical-align();
             right: 10px;
             color: #06c;
-
             &:hover {
                 color: $color-1st;
             }
         }
     }
-
     .ps-checkbox {
-        > label {
+        >label {
             color: $color-heading;
         }
     }
-
     .ps-list--social {
         display: flex;
         flex-flow: row nowrap;
         justify-content: space-between;
         margin: 0 -5px;
-
         li {
             padding: 0 5px;
             width: 100%;
             text-align: center;
             margin-right: 0;
-
             a {
                 display: block;
                 line-height: 20px;
                 padding: 15px 0;
-
                 i {
                     color: #ffffff;
                     text-align: center;
                 }
-
                 &.facebook {
                     background-color: #3b5999;
                 }
-
                 &.google {
                     background-color: #dd4b39;
                 }
-
                 &.twitter {
                     background-color: #55acee;
                 }
-
                 &.instagram {
                     background-color: #e4405f;
                 }
             }
         }
     }
-
     .ps-form__content {
         padding: 30px 30px 0;
-
         h5 {
             margin: 0 0 25px;
             font-size: 16px;
             font-weight: 400;
         }
     }
-
     .ps-form__footer {
         padding: 30px 30px;
     }
-
     .ps-tab {
         background-color: #ffffff;
     }
@@ -334,16 +290,13 @@
 .ps-form--order-tracking {
     max-width: 630px;
     margin: 0 auto 50px;
-
     .form-group {
         margin-bottom: 30px;
-
-        > label {
+        >label {
             font-size: 18px;
             font-weight: 600;
             color: $color-heading;
         }
-
         input {
             border-color: #bfbfbf;
             @include placeholder() {
@@ -351,10 +304,9 @@
             }
         }
     }
-
     @include media('<md') {
         .form-group {
-            > label {
+            >label {
                 font-size: 16px;
                 font-weight: 500;
             }
@@ -369,13 +321,11 @@
         border: none;
         border-radius: 0;
     }
-
     button {
         min-width: 40px;
         height: 40px;
         background-color: #000;
         border: none;
-
         i {
             color: #ffffff;
         }
@@ -384,43 +334,35 @@
 
 .ps-form--subscribe-popup {
     padding: 60px 50px;
-
     h4 {
         margin-bottom: 10px;
         font-size: 24px;
         font-weight: 400;
-
         strong {
             color: $color-1st;
         }
     }
-
     p {
         margin-bottom: 20px;
     }
-
     input {
         margin-bottom: 20px;
         height: 40px;
         border: 2px solid #c9c9c9;
     }
-
     button {
         height: 40px;
         width: auto;
         padding: 0 30px;
     }
-
     .ps-checkbox {
-        > label {
+        >label {
             color: $color-heading;
-
             &:before {
                 border-radius: 3px;
             }
         }
     }
-
     .ps-form__content {
         max-width: 360px;
         text-align: center;
@@ -429,12 +371,10 @@
 
 .ps-form--vendor-datetimepicker {
     margin-bottom: 24px;
-
     .input-group {
         border: 1px solid #d0d0d0;
         border: none;
         margin-bottom: 10px;
-
         &:after {
             content: '\e789';
             font-family: 'Linearicons';
@@ -442,11 +382,9 @@
             right: 10px;
             font-size: 16px;
         }
-
         input {
             height: 40px;
         }
-
         .input-group-text {
             padding: 0 20px;
             font-size: 14px;
@@ -459,20 +397,16 @@
             border-radius: 0;
         }
     }
-
     button {
         background-color: #88aa00;
         border-radius: 0;
         height: 40px;
         padding: 0 30px;
-
         color: #ffffff;
-
         i {
             vertical-align: middle;
             margin-right: 4px;
         }
-
         &:hover {
             background-color: lighten(#88aa00, 5%);
         }
@@ -482,7 +416,6 @@
 .ps-form--photo-search {
     .select2 {
         position: relative;
-
         &:before {
             content: '';
             @include vertical-align();
@@ -492,7 +425,6 @@
             background-color: #dfdfdf;
             z-index: 20;
         }
-
         .select2-selection {
             position: relative;
             height: 60px;
@@ -501,7 +433,6 @@
             border: none;
             min-width: 190px;
             border-radius: 0 6px 6px 0;
-
             .select2-selection__rendered {
                 width: 100%;
                 font-weight: 600;
@@ -509,22 +440,18 @@
             }
         }
     }
-
     .form-group--icon {
         margin-bottom: 0;
         width: 100%;
-
         i {
             right: auto;
             left: 20px;
             font-size: 18px;
             color: $color-heading;
-
             &:before {
                 font-size: inherit;
             }
         }
-
         input {
             background-color: #fff;
             border: none;
@@ -540,38 +467,31 @@
             }
         }
     }
-
     .ps-form__content {
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding-bottom: 30px;
     }
-
     .ps-form__footer {
         a {
             display: inline-block;
             margin-right: 10px;
-
             &:hover {
                 color: $color-photo;
             }
-
             &:last-child {
                 margin-right: 0;
             }
         }
     }
-
     @media (max-width: 480px) {
         .ps-form__content {
             align-items: flex-start;
             flex-flow: column-reverse wrap;
-
             .select2 {
                 margin-bottom: 20px;
                 min-width: 100%;
-
                 .select2-selection {
                     margin: 0 auto;
                 }

@@ -45,18 +45,18 @@ class Login extends Component {
                         <ul className="ps-tab-list">
                             <li className="active">
                                 <Link href="/account/login">
-                                    <a>Login</a>
+                                    <a>Sing-In</a>
                                 </Link>
                             </li>
-                            <li>
+                            {/* <li>
                                 <Link href="/account/register">
                                     <a>Register</a>
                                 </Link>
-                            </li>
+                            </li> */}
                         </ul>
                         <div className="ps-tab active" id="sign-in">
                             <div className="ps-form__content">
-                                <h5>Log In Your Account</h5>
+                                <h5>Email(phone for mobile accounts)</h5>
                                 <div className="form-group">
                                     <Form.Item
                                         name="username"
@@ -70,12 +70,12 @@ class Login extends Component {
                                         <Input
                                             className="form-control"
                                             type="text"
-                                            placeholder="Username or email address"
+                                           // placeholder="Username or email address"
                                         />
                                     </Form.Item>
                                 </div>
                                 <div className="form-group form-forgot">
-                                    <Form.Item
+                                    {/* <Form.Item
                                         name="password"
                                         rules={[
                                             {
@@ -89,11 +89,11 @@ class Login extends Component {
                                             type="password"
                                             placeholder="Password..."
                                         />
-                                    </Form.Item>
+                                    </Form.Item> */}
                                 </div>
                                 <div className="form-group">
                                     <div className="ps-checkbox">
-                                        <input
+                                        {/* <input
                                             className="form-control"
                                             type="checkbox"
                                             id="remember-me"
@@ -101,19 +101,26 @@ class Login extends Component {
                                         />
                                         <label htmlFor="remember-me">
                                             Rememeber me
-                                        </label>
+                                        </label> */}
                                     </div>
                                 </div>
                                 <div className="form-group submit">
                                     <button
                                         type="submit"
                                         className="ps-btn ps-btn--fullwidth">
-                                        Login
+                                        Continue
                                     </button>
                                 </div>
+                                <div className="ps-text ps-text--fullwidth">
+                                    By continuing, you agree to Jaadu's Conditions Use and Privecy Notice. Need help?
+                                </div>
+                                <div className="ps-linetext">
+                                <h6><span>New to Jaadu?</span></h6>
+                                </div>    
                             </div>
+                            
                             <div className="ps-form__footer">
-                                <p>Connect with:</p>
+                                {/* <p>Connect with:</p>
                                 <ul className="ps-list--social">
                                     <li>
                                         <a
@@ -155,10 +162,12 @@ class Login extends Component {
                                             <i className="fa fa-instagram"></i>
                                         </a>
                                     </li>
-                                </ul>
+                                </ul> */}
                             </div>
+                            
                         </div>
                     </Form>
+                    
                 </div>
             </div>
         );
