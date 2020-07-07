@@ -14,7 +14,7 @@ class Login extends Component {
 
     static getDerivedStateFromProps(props) {
         if (props.isLoggedIn === true) {
-            Router.push('/');
+            Router.push('/account/user-information');
         }
         return false;
     }
@@ -31,7 +31,7 @@ class Login extends Component {
     handleLoginSubmit = e => {
         console.log('test');
         this.props.dispatch(login());
-        Router.push('/');
+        Router.push('/account/user-information');
 
     };
 
@@ -56,10 +56,10 @@ class Login extends Component {
                         </ul>
                         <div className="ps-tab active" id="sign-in">
                             <div className="ps-form__content">
-                                <h5>Email(phone for mobile accounts)</h5>
+                                <h5>Email (Phone for mobile accounts)</h5>
                                 <div className="form-group">
                                     <Form.Item
-                                        name="username"
+                                        name="email"
                                         rules={[
                                             {
                                                 required: true,
@@ -70,7 +70,7 @@ class Login extends Component {
                                         <Input
                                             className="form-control"
                                             type="text"
-                                           // placeholder="Username or email address"
+                                        // placeholder="Username or email address"
                                         />
                                     </Form.Item>
                                 </div>
@@ -112,14 +112,30 @@ class Login extends Component {
                                     </button>
                                 </div>
                                 <div className="ps-text ps-text--fullwidth">
-                                    By continuing, you agree to Jaadu's Conditions Use and Privecy Notice. Need help?
+                                    By continuing, you agree to Jaadu's Conditions of Use and Privecy Notice. Need help?
                                 </div>
                                 <div className="ps-linetext">
-                                <h6><span>New to Jaadu?</span></h6>
-                                </div>    
+                                    <h6><span>New to Jaadu?</span></h6>
+                                </div>
+                                <div className="form-group submit">
+                                    <button
+                                        type="submit"
+                                        className="ls-btn ls-btn--fullwidth">
+                                        Continue
+                                    </button>
+                                </div>
                             </div>
-                            
+
                             <div className="ps-form__footer">
+                                <ul className="ps-list--social">
+                                    <li className="">Condition of Use</li>
+                                    <li className="">Privecy Notice</li>
+                                    <li className="">Help</li>
+                                </ul>
+                                <div>
+                                    <p> © 2020 Jaadu. All Rights Reserved</p>
+                                </div>
+
                                 {/* <p>Connect with:</p>
                                 <ul className="ps-list--social">
                                     <li>
@@ -164,10 +180,10 @@ class Login extends Component {
                                     </li>
                                 </ul> */}
                             </div>
-                            
+
                         </div>
                     </Form>
-                    
+
                 </div>
             </div>
         );

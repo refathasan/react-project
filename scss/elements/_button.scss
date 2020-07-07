@@ -170,6 +170,88 @@
             }
         }
         
+        .ls-btn,
+        button.ls-btn {
+            display: inline-block;
+            padding: 15px 45px;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 20px;
+            color: $color-heading;
+            border: none;
+            font-weight: 600;
+            border-radius: 4px;
+            background-color: $color-4th;
+            transition: all 0.4s ease;
+            cursor: pointer;
+            &--rounded {
+                @include border-radius(50px);
+            }
+            &--curve {
+                @include border-radius(5px);
+            }
+            &--outline {
+                border: 2px solid $color-4th;
+                color: $color-4th;
+                background-color: transparent;
+                @include box-shadow(none);
+                font-weight: 500;
+                &:hover {
+                    color: #ffffff;
+                    background-color: $color-4th;
+                }
+            }
+            &--fullwidth {
+                width: 100%;
+                text-align: center;
+            }
+            &--sm {
+                padding: 0.5rem 2rem;
+                font-size: 1.2rem;
+                &.ps-btn--curve {
+                    @include border-radius(3px);
+                }
+            }
+            &--lg {
+                padding: 1.5rem 4rem;
+            }
+            &--xl {
+                padding: 2rem 6rem;
+                font-size: 1.6rem;
+            }
+            &.ps-btn--reverse {
+                background-color: #576391;
+                &:hover {
+                    background-color: $color-2nd;
+                }
+            }
+            &.ps-btn--gray {
+                background-color: #e5e5e5;
+                color: #000000;
+                font-size: 1.6rem;
+            }
+            &.ps-btn--black {
+                background-color: $color-heading;
+                &.ps-btn--outline {
+                    background-color: transparent;
+                    border: 2px solid $color-heading;
+                    color: $color-heading;
+                    &:hover {
+                        background-color: $color-heading;
+                        color: #ffffff;
+                    }
+                }
+            }
+            &:hover,
+            &:active {
+                background-color: #222;
+                color: #fff;
+                &.ps-btn--black {
+                    background-color: $color-4th;
+                }
+            }
+        }
+        
         .ps-btn--favorite {
             position: relative;
             display: inline-block;
