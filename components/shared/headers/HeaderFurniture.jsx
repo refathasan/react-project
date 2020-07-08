@@ -72,7 +72,7 @@ class HeaderFurniture extends Component {
                                 </li>
                                 <li>
                                     <Link href="/page/blank">
-                                        <a>Tract your order</a>
+                                        <a>Track your order</a>
                                     </Link>
                                 </li>
                                 <li>

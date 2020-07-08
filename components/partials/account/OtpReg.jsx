@@ -1,3 +1,4 @@
+
 import React, { Component } from 'react';
 import Link from 'next/link';
 import Router from 'next/router';
@@ -6,7 +7,7 @@ import { login } from '../../../store/auth/action';
 import { Form, Input, notification } from 'antd';
 import { connect } from 'react-redux';
 
-class Login extends Component {
+class OtpReg extends Component {
     constructor(props) {
         super(props);
         this.state = {};
@@ -14,7 +15,7 @@ class Login extends Component {
 
     static getDerivedStateFromProps(props) {
         if (props.isLoggedIn === true) {
-            Router.push('/account/login-2');
+            Router.push('/account/user-information');
         }
         return false;
     }
@@ -33,13 +34,13 @@ class Login extends Component {
         console.log('test', e);
 
         //this.props.dispatch(login());
-        Router.push('/account/login-2');
+        Router.push('/account/user-information');
 
     };
     handleNext = e => {
         console.log('next', e);
         // this.props.dispatch(login());
-        Router.push('/account/register');
+        // Router.push('/account/login-2');
 
     };
 
@@ -51,61 +52,74 @@ class Login extends Component {
                     <Form className="ps-form--account" onFinish={this.handleLoginSubmit.bind(this)} >
                         <ul className="ps-tab-list">
                             <li className="active">
-                                <Link href="/account/login-2">
-                                    <a>Sing-In</a>
+                                <Link href="/account/login">
+                                    <a>Verify email address</a>
                                 </Link>
                             </li>
                         </ul>
                         <div className="ps-tab active" id="sign-in">
                             <div className="ps-form__content">
-                                <h5>Email (Phone for mobile accounts)</h5>
+                                
+                                <h5 >To varify your Email, we'vb sent a One Time password (OTP)to shawkat.jaadu@gmail.com (change)</h5>
+                                <h5>Enter OTP</h5>
                                 <div className="form-group">
-                                    <Form.Item name="email" rules={[
+                                    <Form.Item name="password" rules={[
                                         {
                                             required: true,
                                             message:
-                                                'Please input your email!',
+                                                'Please input your OTP',
                                         },
                                     ]}>
                                         <Input
                                             className="form-control"
-                                            type="email" />
+                                            type="text" />
                                     </Form.Item>
                                 </div>
+                                {/* <div className="ps-checkbox">
+                                    <input
+                                        className="form-control"
+                                        type="checkbox"
+                                        id="remember-me"
+                                        name="remember-me"
+                                    />
+                                    <label htmlFor="remember-me">
+                                        Keep me singed in.<a href="#">Details</a>
+                                    </label>
+                                </div> */}
                                 <div className="form-group submit">
 
                                     <button
                                         type="submit"
                                         className="ps-btn ps-btn--fullwidth"
                                     >
-                                        Continue
+                                        Create your Jaadu account
                                     </button>
                                 </div>
                                 <div className="ps-text ps-text--fullwidth">
-                                    By continuing, you agree to Jaadu's Conditions of Use and Privecy Notice. Need help?
+                                By createting an account, you agree to Jaadu's Condition of Use and privecy Notice.
                                 </div>
-                                <div className="ps-linetext">
+                                {/* <div className="ps-linetext">
                                     <h6><span>New to Jaadu?</span></h6>
-                                </div>
+                                </div> */}
                                 <div className="form-group submit">
                                     {/* Code To handle  */}
 
-                                    <button
+                                    {/* <button
                                         type="submit"
                                         className="ls-btn ls-btn--fullwidth"
-
+                                        
                                         onClick={this.handleNext.bind(this)}>
                                         Continue
-                                    </button>
+                                    </button> */}
                                 </div>
                                 <div className="ps-form__footer">
                                     <ul className="ps-list--social">
-                                        <li >Condition of Use</li>
-                                        <li >Privecy Notice</li>
-                                        <li >Help</li>
+                                        {/* <li className="ps-list--social--cou">Condition of Use</li> */}
+                                        <li className="ps-list--social--cou"><a href="#">Resend OTP</a></li>
+                                        {/* <li className="ps-list--social--cou">Help</li> */}
                                     </ul>
                                     <div >
-                                        <p> © 2020 Jaadu. All Rights Reserved</p>
+                                        {/* <p> © 2020 Jaadu. All Rights Reserved</p> */}
                                     </div>
                                 </div>
 
@@ -120,4 +134,4 @@ class Login extends Component {
 const mapStateToProps = state => {
     return state.auth;
 };
-export default connect(mapStateToProps)(Login);
+export default connect(mapStateToProps)(OtpReg);
