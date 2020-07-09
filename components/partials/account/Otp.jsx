@@ -91,7 +91,7 @@ class Otp extends Component {
                                         type="submit"
                                         className="ps-btn ps-btn--fullwidth"
                                     >
-                                        Create your Jaadu account
+                                        Varify your Jaadu account
                                     </button>
                                 </div>
                                 <div className="ps-text ps-text--fullwidth">

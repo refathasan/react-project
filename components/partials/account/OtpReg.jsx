@@ -92,7 +92,7 @@ class OtpReg extends Component {
                                         type="submit"
                                         className="ps-btn ps-btn--fullwidth"
                                     >
-                                        Varify your Jaadu account
+                                        Create  your Jaadu account
                                     </button>
                                 </div>
                                 <div className="ps-text ps-text--fullwidth">
