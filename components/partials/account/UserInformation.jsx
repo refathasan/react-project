@@ -36,9 +36,9 @@ class UserInformation extends Component {
                 icon: 'icon-store',
             },
             {
-                text: 'Wishlist',
+                text: 'Master Setup',
                 url: '/account/wishlist',
-                icon: 'icon-heart',
+                icon: 'icon-papers',
             },
         ];
         return (
@@ -52,7 +52,7 @@ class UserInformation extends Component {
                                         <img src="/static/img/users/3.jpg" />
                                         <figure>
                                             <figcaption>Hello</figcaption>
-                                            <p>username@gmail.com</p>
+                                            <p>shawkat.islm@gmail.com</p>
                                         </figure>
                                     </div>
                                     <div className="ps-widget__content">

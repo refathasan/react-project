@@ -25,7 +25,7 @@ class Wishlist extends Component {
             <div className="ps-section--shopping ps-whishlist">
                 <div className="container">
                     <div className="ps-section__header">
-                        <h1>Wishlist</h1>
+                        <h1>Master Setup</h1>
                     </div>
                     <div className="ps-section__content">
                         {wishlistItems && wishlistItems.length === 0 ? (
