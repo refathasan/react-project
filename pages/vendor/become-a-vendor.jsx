@@ -18,7 +18,7 @@ const BecomeAVendorPage = () => {
     const breadCrumb = [
         {
             text: 'Home',
-            url: '/',
+            url: '/vendor/vendor-store',
         },
         {
             text: 'Become a Vendor',
