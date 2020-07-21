@@ -31,7 +31,7 @@ class VendorRegistration extends Component {
         console.log('test', e);
 
         //this.props.dispatch(login());
-        Router.push('/account/otp-reg');
+        Router.push('/account/vendor-information');
     };
 
     render() {
