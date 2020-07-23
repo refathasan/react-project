@@ -11,13 +11,13 @@ class VendorInformation extends Component {
         const accountLinks = [
             {
                 text: 'Vendor Summery',
-                url: '/account/user-information',
+                url: '/account/vendor-information',
                 icon: 'icon-vector',
                 active: true,
             },
             {
                 text: 'Add Product',
-                url: '/account/notifications',
+                url: '/account/add-product',
                 icon: 'icon-store',
             },
             {
