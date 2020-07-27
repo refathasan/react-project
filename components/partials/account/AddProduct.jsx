@@ -1,11 +1,36 @@
 import React, { Component } from 'react';
 import Link from 'next/link';
 import { Form, Input, Radio, DatePicker } from 'antd';
+import { Upload, message, Button, } from 'antd';
+import Icon from '@ant-design/icons';
 
+const props = {
+    name: 'file',
+    action: '//jsonplaceholder.typicode.com/posts/',
+    headers: {
+        authorization: 'authorization-text',
+    },
+    onChange(info) {
+        if (info.file.status !== 'uploading') {
+            let reader = new FileReader();
+            reader.onload = (e) => {
+                console.log(e.target.result);
+            }
+            reader.readAsText(info.file.originFileObj);
+        }
+        if (info.file.status === 'done') {
+            message.success(`${info.file.name} file uploaded successfully`);
+        } else if (info.file.status === 'error') {
+            message.error(`${info.file.name} file upload failed.`);
+        }
+    },
+};
 class AddProduct extends Component {
+
     constructor(props) {
         super(props);
     }
+
 
     render() {
         const accountLinks = [
@@ -315,11 +340,13 @@ class AddProduct extends Component {
                                                                     'Please upload image',
                                                             },
                                                         ]}>
-                                                        <Input
-                                                            className="form-control"
-                                                            type="text"
-                                                            placeholder="Upload Image"
-                                                        />
+                                                        <Upload {...props}>
+                                                            <Button>
+                                                                <Icon type="upload" /> Click to Upload
+                                                            </Button>
+
+                                                        </Upload>
+
                                                     </Form.Item>
                                                 </div>
                                             </div>
@@ -340,7 +367,7 @@ class AddProduct extends Component {
                                                         </button>
                                                     </Form.Item> */}
                                                     <button className="ps-btn">
-                                                            Add more +
+                                                        Add more +
                                                         </button>
                                                 </div>
                                             </div>
@@ -410,7 +437,7 @@ class AddProduct extends Component {
                                             </div> */}
                                             <div className="col-sm-6">
                                                 <div className="form-group">
-                                                    {/* <Form.Item
+                                                    <Form.Item
                                                         // label="Email"
                                                         name="email"
                                                         rules={[
@@ -420,12 +447,13 @@ class AddProduct extends Component {
                                                                     'Please input your username!',
                                                             },
                                                         ]}>
-                                                        <button className="ps-btn">
-                                                            Add more +
-                                                        </button>
-                                                    </Form.Item> */}
+                                                         <Upload {...props}>
+                                                            <Button>
+                                                                <Icon type="upload" /> Click to Upload</Button>
+                                                        </Upload>
+                                                    </Form.Item>
                                                     <button className="ps-btn">
-                                                            Add more +
+                                                        Add more +
                                                         </button>
                                                 </div>
                                             </div>
@@ -485,11 +513,15 @@ class AddProduct extends Component {
                                                                     'Please upload image',
                                                             },
                                                         ]}>
-                                                        <Input
+                                                        {/* <Input
                                                             className="form-control"
                                                             type="text"
                                                             placeholder="Upload Image"
-                                                        />
+                                                        /> */}
+                                                        <Upload {...props}>
+                                                            <Button>
+                                                                <Icon type="upload" /> Click to Upload</Button>
+                                                        </Upload>
                                                     </Form.Item>
                                                 </div>
                                             </div>
@@ -508,7 +540,7 @@ class AddProduct extends Component {
                                                         
                                                     </Form.Item> */}
                                                     <button className="ps-btn">
-                                                            Add more +
+                                                        Add more +
                                                         </button>
                                                 </div>
                                             </div>
@@ -546,7 +578,7 @@ class AddProduct extends Component {
                                         </div> */}
                                         <div className="form-group submit">
                                             <button className="ps-btn">
-                                            SUBMIT FOR APPROVAL
+                                                SUBMIT FOR APPROVAL
                                             </button>
                                         </div>
                                     </div>

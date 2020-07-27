@@ -8,6 +8,29 @@ import PrevArrow from '../../elements/carousel/PrevArrow';
 import Rating from '../../elements/Rating';
 import { carouselStandard } from '../../../utilities/carousel-helpers';
 import ProductOffline from '../../elements/products/ProductOffline';
+import { Upload, message, Button, } from 'antd';
+import Icon from '@ant-design/icons';
+const props = {
+    name: 'file',
+    action: '//jsonplaceholder.typicode.com/posts/',
+    headers: {
+        authorization: 'authorization-text',
+    },
+    onChange(info) {
+        if (info.file.status !== 'uploading') {
+            let reader = new FileReader();
+            reader.onload = (e) => {
+                console.log(e.target.result);
+            }
+            reader.readAsText(info.file.originFileObj);
+        }
+        if (info.file.status === 'done') {
+            message.success(`${info.file.name} file uploaded successfully`);
+        } else if (info.file.status === 'error') {
+            message.error(`${info.file.name} file upload failed.`);
+        }
+    },
+};
 
 import Link from 'next/link';
 import Router from 'next/router';
@@ -156,7 +179,7 @@ class VendorRegistration extends Component {
                                         <input
                                             className="form-control"
                                             type="text"
-                                            placeholder="Country"
+                                            placeholder="country"
                                         />
                                     </Form.Item>
                                 </div>
@@ -255,11 +278,10 @@ class VendorRegistration extends Component {
                                                     'Please input your Upload Logo',
                                             },
                                         ]}>
-                                        <Input
-                                            className="form-control"
-                                            type="text"
-                                            placeholder="Upload Logo"
-                                        />
+                                        <Upload {...props}>
+                                            <Button>
+                                                <Icon type="upload" /> Click to Upload</Button>
+                                        </Upload>
                                     </Form.Item>
                                 </div>
                                 <div className="form-group submit">
