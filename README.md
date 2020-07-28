@@ -1,5 +1,6 @@
-## MARTFURY TEMPLATE - REACT VERSION
+## GONONET E-Commerce TEMPLATE - REACT VERSION
 ###### Version 1.2.0
+###### Developer Shawkat Islam & Refat Hasan
 ### Installation
 ```bash
 npm install
