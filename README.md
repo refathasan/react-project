@@ -8,6 +8,13 @@ or Yarn
 ```bash
 yarn install 
 ```
+
+```bash
+yarn build
+```
+```bash
+yarn start
+```
 ### Develope
 ```bash
 yarn dev 
